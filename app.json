@@ -1,0 +1,46 @@
+{
+  "id": "1a9249ee-60b8-4da4-9c8a-edea122adf7f",
+  "name": "bc2adls_migration",
+  "publisher": "The bc2adls team",
+  "version": "1.0.0.0",
+  "brief": "Migration extension for moving from bc2adls PTE extension to bc2adls appsource extension.",
+  "description": "Migration extension for moving from bc2adls PTE extension to bc2adls appsource extension.",
+  "privacyStatement": "",
+  "EULA": "",
+  "help": "",
+  "url": "",
+  "logo": "",
+  "dependencies": [
+    {
+      "id": "1688530c-452c-4b06-8947-ab4bf5b26053",
+      "name": "Azure Data Lake Storage Export",
+      "publisher": "The bc2adls team",
+      "version": "27.44.0.0"
+    },
+    {
+      "id": "7a4530b3-2449-40ad-9779-97f4663ce51f",
+      "name": "BC2ADLS",
+      "publisher": "bc2adls",
+      "version": "27.45.0.0"
+    }
+  ],
+  "screenshots": [],
+  "platform": "27.0.0.0",
+  "application": "27.0.0.0",
+  "idRanges": [
+    {
+      "from": 83500,
+      "to": 83500
+    }
+  ],
+  "resourceExposurePolicy": {
+    "allowDebugging": true,
+    "allowDownloadingSource": true,
+    "includeSourceInSymbolFile": true
+  },
+  "runtime": "16.0",
+  "target": "Cloud",
+  "features": [
+    "NoImplicitWith"
+  ]
+}
