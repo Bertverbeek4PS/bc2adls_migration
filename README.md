@@ -17,10 +17,6 @@ Follow these steps in order to successfully migrate from the PTE extension to th
 - Install the new Azure Data Lake Storage Export (ADLSE) AppSource extension
 - The version must be **27.46.0 or later**
 - This is the new official extension published by the bc2adls team
-- **Important**: After installation, you must manually configure the following fields in the ADLSE Setup:
-  - **Tenant ID**: Azure tenant ID
-  - **Client ID**: Azure app registration client ID
-  - **Client Secret**: Azure app registration client secret
 
 ### Step 3: Install the Migration Extension
 - Install this migration extension (bc2adls_migration)
@@ -36,7 +32,11 @@ Follow these steps in order to successfully migrate from the PTE extension to th
   - ADLSE Enum Translation Lang
   - Deleted Tables Not to Sync
   - ADLSE Deleted Record
-
+- **Important**: After installation, you must manually configure the following fields in the ADLSE Setup:
+  - **Tenant ID**: Azure tenant ID
+  - **Client ID**: Azure app registration client ID
+  - **Client Secret**: Azure app registration client secret
+  
 ### Step 4: Verify Migration
 - Verify that all your configuration has been migrated correctly
 - Test the ADLSE functionality with the AppSource extension
