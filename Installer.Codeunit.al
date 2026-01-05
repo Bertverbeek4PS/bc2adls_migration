@@ -26,8 +26,8 @@ codeunit 83500 "BC2ADLS Installer"
         ADLSESetup: Record "ADLSE Setup";
         bc2adls_dataTransfer: DataTransfer;
     begin
-        // if UpgradeTag.HasUpgradeTag(CopyBc2adlsSetupTableUpgradeTag()) then
-        //     exit;
+        if UpgradeTag.HasUpgradeTag(CopyBc2adlsSetupTableUpgradeTag()) then
+            exit;
 
         AZDSetup.DeleteAll();
 
@@ -57,7 +57,7 @@ codeunit 83500 "BC2ADLS Installer"
         bc2adls_dataTransfer.AddFieldValue(ADLSESetup.FieldNo("Export Closing Date column"), AZDSetup.FieldNo("Export Closing Date column"));
         bc2adls_dataTransfer.CopyRows();
 
-        //UpgradeTag.SetUpgradeTag(CopyBc2adlsSetupTableUpgradeTag());
+        UpgradeTag.SetUpgradeTag(CopyBc2adlsSetupTableUpgradeTag());
     end;
 
     local procedure bc2adls_table()
@@ -66,8 +66,8 @@ codeunit 83500 "BC2ADLS Installer"
         ADLSETable: Record "ADLSE Table";
         bc2adls_dataTransfer: DataTransfer;
     begin
-        // if UpgradeTag.HasUpgradeTag(CopyBc2adlsTableTableUpgradeTag()) then
-        //     exit;
+        if UpgradeTag.HasUpgradeTag(CopyBc2adlsTableTableUpgradeTag()) then
+            exit;
 
         AZDTable.DeleteAll();
 
@@ -79,7 +79,7 @@ codeunit 83500 "BC2ADLS Installer"
         bc2adls_dataTransfer.AddFieldValue(ADLSETable.FieldNo("Initial Load Start Date"), AZDTable.FieldNo("Initial Load Start Date"));
         bc2adls_dataTransfer.CopyRows();
 
-        //UpgradeTag.SetUpgradeTag(CopyBc2adlsTableTableUpgradeTag());
+        UpgradeTag.SetUpgradeTag(CopyBc2adlsTableTableUpgradeTag());
     end;
 
     local procedure bc2adls_field()
@@ -88,8 +88,8 @@ codeunit 83500 "BC2ADLS Installer"
         ADLSEField: Record "ADLSE Field";
         bc2adls_dataTransfer: DataTransfer;
     begin
-        // if UpgradeTag.HasUpgradeTag(CopyBc2adlsFieldTableUpgradeTag()) then
-        //     exit;
+        if UpgradeTag.HasUpgradeTag(CopyBc2adlsFieldTableUpgradeTag()) then
+            exit;
 
         AZDField.DeleteAll();
 
@@ -99,7 +99,7 @@ codeunit 83500 "BC2ADLS Installer"
         bc2adls_dataTransfer.AddFieldValue(ADLSEField.FieldNo(Enabled), AZDField.FieldNo(Enabled));
         bc2adls_dataTransfer.CopyRows();
 
-        //UpgradeTag.SetUpgradeTag(CopyBc2adlsFieldTableUpgradeTag());
+        UpgradeTag.SetUpgradeTag(CopyBc2adlsFieldTableUpgradeTag());
     end;
 
     local procedure bc2adls_lastTimestamp()
@@ -108,8 +108,8 @@ codeunit 83500 "BC2ADLS Installer"
         ADLSELastTimestamp: Record "ADLSE Table Last Timestamp";
         bc2adls_dataTransfer: DataTransfer;
     begin
-        // if UpgradeTag.HasUpgradeTag(CopyBc2adlsLastTimestampTableUpgradeTag()) then
-        //     exit;
+        if UpgradeTag.HasUpgradeTag(CopyBc2adlsLastTimestampTableUpgradeTag()) then
+            exit;
 
         AZDLastTimestamp.DeleteAll();
 
@@ -120,7 +120,7 @@ codeunit 83500 "BC2ADLS Installer"
         bc2adls_dataTransfer.AddFieldValue(ADLSELastTimestamp.FieldNo("Deleted Last Entry No."), AZDLastTimestamp.FieldNo("Deleted Last Entry No."));
         bc2adls_dataTransfer.CopyRows();
 
-        //UpgradeTag.SetUpgradeTag(CopyBc2adlsLastTimestampTableUpgradeTag());
+        UpgradeTag.SetUpgradeTag(CopyBc2adlsLastTimestampTableUpgradeTag());
     end;
 
     local procedure bc2adls_exportCategoryTable()
@@ -129,8 +129,8 @@ codeunit 83500 "BC2ADLS Installer"
         ADLSEExportCategoryTable: Record "ADLSE Export Category Table";
         bc2adls_dataTransfer: DataTransfer;
     begin
-        // if UpgradeTag.HasUpgradeTag(CopyBc2adlsExportCategoryTableTableUpgradeTag()) then
-        //     exit;
+        if UpgradeTag.HasUpgradeTag(CopyBc2adlsExportCategoryTableTableUpgradeTag()) then
+            exit;
 
         AZDExportCategoryTable.DeleteAll();
 
@@ -139,7 +139,7 @@ codeunit 83500 "BC2ADLS Installer"
         bc2adls_dataTransfer.AddFieldValue(ADLSEExportCategoryTable.FieldNo(Description), AZDExportCategoryTable.FieldNo(Description));
         bc2adls_dataTransfer.CopyRows();
 
-        //UpgradeTag.SetUpgradeTag(CopyBc2adlsExportCategoryTableTableUpgradeTag());
+        UpgradeTag.SetUpgradeTag(CopyBc2adlsExportCategoryTableTableUpgradeTag());
     end;
 
     local procedure bc2adls_enumTranslation()
@@ -148,8 +148,8 @@ codeunit 83500 "BC2ADLS Installer"
         ADLSEEnumTranslation: Record "ADLSE Enum Translation";
         bc2adls_dataTransfer: DataTransfer;
     begin
-        // if UpgradeTag.HasUpgradeTag(CopyBc2adlsEnumTranslationTableUpgradeTag()) then
-        //     exit;
+        if UpgradeTag.HasUpgradeTag(CopyBc2adlsEnumTranslationTableUpgradeTag()) then
+            exit;
 
         AZDEnumTranslation.DeleteAll();
 
@@ -160,7 +160,7 @@ codeunit 83500 "BC2ADLS Installer"
         bc2adls_dataTransfer.AddFieldValue(ADLSEEnumTranslation.FieldNo("Compliant Field Name"), AZDEnumTranslation.FieldNo("Compliant Field Name"));
         bc2adls_dataTransfer.CopyRows();
 
-        //UpgradeTag.SetUpgradeTag(CopyBc2adlsEnumTranslationTableUpgradeTag());
+        UpgradeTag.SetUpgradeTag(CopyBc2adlsEnumTranslationTableUpgradeTag());
     end;
 
     local procedure bc2adls_enumTranslationLang()
@@ -169,8 +169,8 @@ codeunit 83500 "BC2ADLS Installer"
         ADLSEEnumTranslationLang: Record "ADLSE Enum Translation Lang";
         bc2adls_dataTransfer: DataTransfer;
     begin
-        // if UpgradeTag.HasUpgradeTag(CopyBc2adlsEnumTranslationLangTableUpgradeTag()) then
-        //     exit;
+        if UpgradeTag.HasUpgradeTag(CopyBc2adlsEnumTranslationLangTableUpgradeTag()) then
+            exit;
 
         AZDEnumTranslationLang.DeleteAll();
 
@@ -184,7 +184,7 @@ codeunit 83500 "BC2ADLS Installer"
         bc2adls_dataTransfer.AddFieldValue(ADLSEEnumTranslationLang.FieldNo("Enum Value Caption"), AZDEnumTranslationLang.FieldNo("Enum Value Caption"));
         bc2adls_dataTransfer.CopyRows();
 
-        //UpgradeTag.SetUpgradeTag(CopyBc2adlsEnumTranslationLangTableUpgradeTag());
+        UpgradeTag.SetUpgradeTag(CopyBc2adlsEnumTranslationLangTableUpgradeTag());
     end;
 
     local procedure bc2adls_deletedTablesNotToSync()
@@ -193,8 +193,8 @@ codeunit 83500 "BC2ADLS Installer"
         DeletedTablesNotToSync: Record "Deleted Tables Not to Sync";
         bc2adls_dataTransfer: DataTransfer;
     begin
-        // if UpgradeTag.HasUpgradeTag(CopyBc2adlsDeletedTablesNotToSyncTableUpgradeTag()) then
-        //     exit;
+        if UpgradeTag.HasUpgradeTag(CopyBc2adlsDeletedTablesNotToSyncTableUpgradeTag()) then
+            exit;
 
         AZDDeletedTableFilter.DeleteAll();
 
@@ -202,7 +202,7 @@ codeunit 83500 "BC2ADLS Installer"
         bc2adls_dataTransfer.AddFieldValue(DeletedTablesNotToSync.FieldNo(TableId), AZDDeletedTableFilter.FieldNo(TableId));
         bc2adls_dataTransfer.CopyRows();
 
-        //UpgradeTag.SetUpgradeTag(CopyBc2adlsDeletedTablesNotToSyncTableUpgradeTag());
+        UpgradeTag.SetUpgradeTag(CopyBc2adlsDeletedTablesNotToSyncTableUpgradeTag());
     end;
 
     local procedure bc2adls_deletedRecord()
@@ -211,8 +211,8 @@ codeunit 83500 "BC2ADLS Installer"
         ADLSEDeletedRecord: Record "ADLSE Deleted Record";
         bc2adls_dataTransfer: DataTransfer;
     begin
-        // if UpgradeTag.HasUpgradeTag(CopyBc2adlsDeletedRecordTableUpgradeTag()) then
-        //     exit;
+        if UpgradeTag.HasUpgradeTag(CopyBc2adlsDeletedRecordTableUpgradeTag()) then
+            exit;
 
         AZDDeletedRecord.DeleteAll();
 
@@ -223,7 +223,7 @@ codeunit 83500 "BC2ADLS Installer"
         bc2adls_dataTransfer.AddFieldValue(ADLSEDeletedRecord.FieldNo("Deletion Timestamp"), AZDDeletedRecord.FieldNo("Deletion Timestamp"));
         bc2adls_dataTransfer.CopyRows();
 
-        //UpgradeTag.SetUpgradeTag(CopyBc2adlsDeletedRecordTableUpgradeTag());
+        UpgradeTag.SetUpgradeTag(CopyBc2adlsDeletedRecordTableUpgradeTag());
     end;
 
     local procedure bc2adls_ADLSERun()
@@ -232,8 +232,8 @@ codeunit 83500 "BC2ADLS Installer"
         ADLSERun: Record "ADLSE Run";
         bc2adls_dataTransfer: DataTransfer;
     begin
-        // if UpgradeTag.HasUpgradeTag(CopyBc2adlsADLSERunTableUpgradeTag()) then
-        //     exit;
+        if UpgradeTag.HasUpgradeTag(CopyBc2adlsADLSERunTableUpgradeTag()) then
+            exit;
 
         AZDRun.DeleteAll();
 
@@ -247,7 +247,7 @@ codeunit 83500 "BC2ADLS Installer"
         bc2adls_dataTransfer.AddFieldValue(ADLSERun.FieldNo(Ended), AZDRun.FieldNo(Ended));
         bc2adls_dataTransfer.CopyRows();
 
-        //UpgradeTag.SetUpgradeTag(CopyBc2adlsADLSERunTableUpgradeTag());
+        UpgradeTag.SetUpgradeTag(CopyBc2adlsADLSERunTableUpgradeTag());
     end;
 
     local procedure CopyBc2adlsSetupTableUpgradeTag(): Code[250]
