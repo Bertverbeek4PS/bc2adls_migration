@@ -11,11 +11,11 @@ The BC2ADLS migration extension automatically transfers all configuration and da
 Follow these steps in order to successfully migrate from the PTE extension to the AppSource extension:
 
 ### Step 1: Upgrade the PTE Extension
-- Upgrade your existing BC2ADLS PTE extension to **version 27.44.0 or later**
+- Upgrade your existing BC2ADLS PTE extension to **version 27.47.0 or later**
 
 ### Step 2: Install the AppSource Extension
 - Install the new Azure Data Lake Storage Export (ADLSE) AppSource extension
-- The version must be **27.46.0 or later**
+- The version must be **27.47.0 or later**
 - This is the new official extension published by the bc2adls team
 
 ### Step 3: Install the Migration Extension
